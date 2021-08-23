@@ -1,0 +1,32 @@
+service: revenue-by-search-sample
+provider:
+  name: aws
+  # stage: dev
+  runtime: python3.7
+  region: us-east-1
+
+custom:
+  pythonRequirements:
+    dockerizePip: true
+
+package:
+  individually: false
+  exclude:
+    - package.json
+    - package-log.json
+    - node_modules/**
+
+functions:
+  sample:
+    handler: Hello.lambda_handler
+    layers:
+      - arn:aws:lambda:us-east-1:480915327742:layer:pandas-python3-7:2
+    events: 
+      - s3:
+          bucket: browsing-events
+          event: s3:ObjectCreated:*
+          rules:
+            - prefix: input/
+            - suffix: .tab
+plugins:
+  - serverless-python-requirements
