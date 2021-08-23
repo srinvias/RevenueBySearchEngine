@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [14.17.5]
+        node-version: [10.x]
     steps:
       - uses: actions/checkout@master
       - name: Use Node.js ${{ matrix.node-version }}

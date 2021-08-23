@@ -45,5 +45,5 @@ serverless plugin install -n serverless-python-requirements
 npm run-script deploy
 
 git add .
-git commit -am "serverless - excludeDevDependencies"
+git commit -am "node 10 &add pyjokes requirments and remove dependicies package"
 git push
