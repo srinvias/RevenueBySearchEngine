@@ -1,8 +1,8 @@
 {
   "service": {
-    "service": "revenue-by-search-sample",
+    "service": "revenue-by-search-sample-2",
     "serviceObject": {
-      "name": "revenue-by-search-sample"
+      "name": "revenue-by-search-sample-2"
     },
     "provider": {
       "name": "aws",
@@ -83,10 +83,10 @@
               }
             }
           },
-          "SampleLogGroup": {
+          "SampleDash2LogGroup": {
             "Type": "AWS::Logs::LogGroup",
             "Properties": {
-              "LogGroupName": "/aws/lambda/revenue-by-search-sample-dev-sample"
+              "LogGroupName": "/aws/lambda/revenue-by-search-sample-2-dev-sample-2"
             }
           },
           "IamRoleLambdaExecution": {
@@ -114,7 +114,7 @@
                     "Fn::Join": [
                       "-",
                       [
-                        "revenue-by-search-sample",
+                        "revenue-by-search-sample-2",
                         "dev",
                         "lambda"
                       ]
@@ -131,7 +131,7 @@
                         ],
                         "Resource": [
                           {
-                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/revenue-by-search-sample-dev*:*"
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/revenue-by-search-sample-2-dev*:*"
                           }
                         ]
                       },
@@ -142,7 +142,7 @@
                         ],
                         "Resource": [
                           {
-                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/revenue-by-search-sample-dev*:*:*"
+                            "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/revenue-by-search-sample-2-dev*:*:*"
                           }
                         ]
                       }
@@ -155,7 +155,7 @@
                 "Fn::Join": [
                   "-",
                   [
-                    "revenue-by-search-sample",
+                    "revenue-by-search-sample-2",
                     "dev",
                     {
                       "Ref": "AWS::Region"
@@ -166,18 +166,18 @@
               }
             }
           },
-          "SampleLambdaFunction": {
+          "SampleDash2LambdaFunction": {
             "Type": "AWS::Lambda::Function",
             "Properties": {
               "Code": {
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/revenue-by-search-sample/dev/1629690306412-2021-08-23T03:45:06.412Z/revenue-by-search-sample.zip"
+                "S3Key": "serverless/revenue-by-search-sample-2/dev/1629690956344-2021-08-23T03:55:56.344Z/revenue-by-search-sample-2.zip"
               },
               "Handler": "Hello.lambda_handler",
               "Runtime": "python3.7",
-              "FunctionName": "revenue-by-search-sample-dev-sample",
+              "FunctionName": "revenue-by-search-sample-2-dev-sample-2",
               "MemorySize": 1024,
               "Timeout": 6,
               "Role": {
@@ -191,30 +191,30 @@
               ]
             },
             "DependsOn": [
-              "SampleLogGroup"
+              "SampleDash2LogGroup"
             ]
           },
-          "SampleLambdaVersionHZ2HtV6Hp9vF3sHcQRyrNyznctaGcKUR4DPSE1CdR8": {
+          "SampleDash2LambdaVersionfdemRVmDuWuV0LEpg1SHBJBQ0T7OV8ecOT3GHhIY": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
-                "Ref": "SampleLambdaFunction"
+                "Ref": "SampleDash2LambdaFunction"
               },
-              "CodeSha256": "kGWlYiaYcxes58IvfjCf6BU23cfIyT/1Bcv9gguGv0Y="
+              "CodeSha256": "5TZAydjiADk1xU6gWLmt5fW0T9CggcOfsM/nA79Fti8="
             }
           },
-          "S3BucketBrowsingevents": {
+          "S3BucketBrowsingevents1": {
             "Type": "AWS::S3::Bucket",
             "Properties": {
-              "BucketName": "browsing-events",
+              "BucketName": "browsing-events-1",
               "NotificationConfiguration": {
                 "LambdaConfigurations": [
                   {
                     "Event": "s3:ObjectCreated:*",
                     "Function": {
                       "Fn::GetAtt": [
-                        "SampleLambdaFunction",
+                        "SampleDash2LambdaFunction",
                         "Arn"
                       ]
                     },
@@ -237,15 +237,15 @@
               }
             },
             "DependsOn": [
-              "SampleLambdaPermissionBrowsingeventsS3"
+              "SampleDash2LambdaPermissionBrowsingevents1S3"
             ]
           },
-          "SampleLambdaPermissionBrowsingeventsS3": {
+          "SampleDash2LambdaPermissionBrowsingevents1S3": {
             "Type": "AWS::Lambda::Permission",
             "Properties": {
               "FunctionName": {
                 "Fn::GetAtt": [
-                  "SampleLambdaFunction",
+                  "SampleDash2LambdaFunction",
                   "Arn"
                 ]
               },
@@ -259,7 +259,7 @@
                     {
                       "Ref": "AWS::Partition"
                     },
-                    ":s3:::browsing-events"
+                    ":s3:::browsing-events-1"
                   ]
                 ]
               },
@@ -275,16 +275,16 @@
               "Ref": "ServerlessDeploymentBucket"
             },
             "Export": {
-              "Name": "sls-revenue-by-search-sample-dev-ServerlessDeploymentBucketName"
+              "Name": "sls-revenue-by-search-sample-2-dev-ServerlessDeploymentBucketName"
             }
           },
-          "SampleLambdaFunctionQualifiedArn": {
+          "SampleDash2LambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "SampleLambdaVersionHZ2HtV6Hp9vF3sHcQRyrNyznctaGcKUR4DPSE1CdR8"
+              "Ref": "SampleDash2LambdaVersionfdemRVmDuWuV0LEpg1SHBJBQ0T7OV8ecOT3GHhIY"
             },
             "Export": {
-              "Name": "sls-revenue-by-search-sample-dev-SampleLambdaFunctionQualifiedArn"
+              "Name": "sls-revenue-by-search-sample-2-dev-SampleDash2LambdaFunctionQualifiedArn"
             }
           }
         }
@@ -383,15 +383,15 @@
     ],
     "pluginsData": {},
     "functions": {
-      "sample": {
+      "sample-2": {
         "handler": "Hello.lambda_handler",
         "layers": {
-          "$ref": "$[\"service\"][\"provider\"][\"compiledCloudFormationTemplate\"][\"Resources\"][\"SampleLambdaFunction\"][\"Properties\"][\"Layers\"]"
+          "$ref": "$[\"service\"][\"provider\"][\"compiledCloudFormationTemplate\"][\"Resources\"][\"SampleDash2LambdaFunction\"][\"Properties\"][\"Layers\"]"
         },
         "events": [
           {
             "s3": {
-              "bucket": "browsing-events",
+              "bucket": "browsing-events-1",
               "event": "s3:ObjectCreated:*",
               "rules": [
                 {
@@ -404,13 +404,13 @@
             }
           }
         ],
-        "name": "revenue-by-search-sample-dev-sample",
+        "name": "revenue-by-search-sample-2-dev-sample-2",
         "package": {},
         "memory": 1024,
         "timeout": 6,
         "runtime": "python3.7",
         "vpc": {},
-        "versionLogicalId": "SampleLambdaVersionHZ2HtV6Hp9vF3sHcQRyrNyznctaGcKUR4DPSE1CdR8"
+        "versionLogicalId": "SampleDash2LambdaVersionfdemRVmDuWuV0LEpg1SHBJBQ0T7OV8ecOT3GHhIY"
       }
     },
     "configValidationMode": "warn",
@@ -432,8 +432,8 @@
           "package-log.json",
           "node_modules/**"
         ],
-        "artifact": "/Users/spadal/RevenueBySearchEngine/.serverless/revenue-by-search-sample.zip",
-        "artifactDirectoryName": "serverless/revenue-by-search-sample/dev/1629690306412-2021-08-23T03:45:06.412Z"
+        "artifact": "/Users/spadal/RevenueBySearchEngine/.serverless/revenue-by-search-sample-2.zip",
+        "artifactDirectoryName": "serverless/revenue-by-search-sample-2/dev/1629690956344-2021-08-23T03:55:56.344Z"
       },
       "functions": {
         "$ref": "$[\"service\"][\"functions\"]"
@@ -444,11 +444,11 @@
     },
     "layers": {},
     "isDashboardMonitoringPreconfigured": false,
-    "artifact": "/Users/spadal/RevenueBySearchEngine/.serverless/revenue-by-search-sample.zip"
+    "artifact": "/Users/spadal/RevenueBySearchEngine/.serverless/revenue-by-search-sample-2.zip"
   },
   "package": {
     "individually": false,
-    "artifactDirectoryName": "serverless/revenue-by-search-sample/dev/1629690306412-2021-08-23T03:45:06.412Z",
-    "artifact": "revenue-by-search-sample.zip"
+    "artifactDirectoryName": "serverless/revenue-by-search-sample-2/dev/1629690956344-2021-08-23T03:55:56.344Z",
+    "artifact": "revenue-by-search-sample-2.zip"
   }
 }

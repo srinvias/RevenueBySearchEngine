@@ -1,5 +1,5 @@
 {
-  "name": "package-serverless",
+  "name": "package-serverless-sample",
   "description": "",
   "version": "0.1.0",
   "dependencies": {},
@@ -7,6 +7,7 @@
     "deploy": "serverless deploy"
   },
   "devDependencies": {
+    "serverless": "^1.67.0",
     "serverless-python-requirements": "^5.1.1"
   }
 }

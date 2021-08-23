@@ -1,4 +1,4 @@
-name: browsersearch-githubaction
+name: browsersearch-github-action
 
 on:
   push:
