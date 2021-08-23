@@ -173,7 +173,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/revenue-by-search-sample/dev/1629687313243-2021-08-23T02:55:13.243Z/revenue-by-search-sample.zip"
+                "S3Key": "serverless/revenue-by-search-sample/dev/1629687457093-2021-08-23T02:57:37.093Z/revenue-by-search-sample.zip"
               },
               "Handler": "Hello.lambda_handler",
               "Runtime": "python3.7",
@@ -194,14 +194,14 @@
               "SampleLogGroup"
             ]
           },
-          "SampleLambdaVersionfAZ2Nk5Q3gHhad1Fa0vKiHGS5eCfJov1ZQoeFaYWSM": {
+          "SampleLambdaVersionurbxgaL6YvArtGMTdkObKGSFhXL5YR6ptppJsndPY": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "SampleLambdaFunction"
               },
-              "CodeSha256": "8sry5jeL1a6AM7QGNBbD2kCr32NpxN2kd876W1glDAQ="
+              "CodeSha256": "QAfQVvVAmsz0RfZF6vHM8VMOPf2e131MbIT3G3FGgAA="
             }
           },
           "S3BucketBrowsingevents": {
@@ -281,7 +281,7 @@
           "SampleLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "SampleLambdaVersionfAZ2Nk5Q3gHhad1Fa0vKiHGS5eCfJov1ZQoeFaYWSM"
+              "Ref": "SampleLambdaVersionurbxgaL6YvArtGMTdkObKGSFhXL5YR6ptppJsndPY"
             },
             "Export": {
               "Name": "sls-revenue-by-search-sample-dev-SampleLambdaFunctionQualifiedArn"
@@ -410,7 +410,7 @@
         "timeout": 6,
         "runtime": "python3.7",
         "vpc": {},
-        "versionLogicalId": "SampleLambdaVersionfAZ2Nk5Q3gHhad1Fa0vKiHGS5eCfJov1ZQoeFaYWSM"
+        "versionLogicalId": "SampleLambdaVersionurbxgaL6YvArtGMTdkObKGSFhXL5YR6ptppJsndPY"
       }
     },
     "configValidationMode": "warn",
@@ -426,7 +426,6 @@
         "$ref": "$[\"service\"][\"custom\"]"
       },
       "package": {
-        "excludeDevDependencies": false,
         "individually": false,
         "exclude": [
           "package.json",
@@ -434,7 +433,7 @@
           "node_modules/**"
         ],
         "artifact": "/Users/spadal/RevenueBySearchEngine/.serverless/revenue-by-search-sample.zip",
-        "artifactDirectoryName": "serverless/revenue-by-search-sample/dev/1629687313243-2021-08-23T02:55:13.243Z"
+        "artifactDirectoryName": "serverless/revenue-by-search-sample/dev/1629687457093-2021-08-23T02:57:37.093Z"
       },
       "functions": {
         "$ref": "$[\"service\"][\"functions\"]"
@@ -449,7 +448,7 @@
   },
   "package": {
     "individually": false,
-    "artifactDirectoryName": "serverless/revenue-by-search-sample/dev/1629687313243-2021-08-23T02:55:13.243Z",
+    "artifactDirectoryName": "serverless/revenue-by-search-sample/dev/1629687457093-2021-08-23T02:57:37.093Z",
     "artifact": "revenue-by-search-sample.zip"
   }
 }

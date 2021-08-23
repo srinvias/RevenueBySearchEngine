@@ -10,7 +10,7 @@ custom:
     dockerizePip: true
 
 package:
-  excludeDevDependencies: false
+  # excludeDevDependencies: false
   individually: false
   exclude:
     - package.json
