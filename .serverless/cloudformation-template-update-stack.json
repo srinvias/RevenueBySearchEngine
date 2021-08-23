@@ -161,7 +161,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/revenue-by-search-sample/dev/1629685226632-2021-08-23T02:20:26.632Z/revenue-by-search-sample.zip"
+          "S3Key": "serverless/revenue-by-search-sample/dev/1629685613409-2021-08-23T02:26:53.409Z/revenue-by-search-sample.zip"
         },
         "Handler": "Hello.lambda_handler",
         "Runtime": "python3.7",
@@ -182,14 +182,14 @@
         "SampleLogGroup"
       ]
     },
-    "SampleLambdaVersionlXVMNGlVs2RU7bXeEKWrPqHzILcW893X7sQZKPwNM": {
+    "SampleLambdaVersionfAZ2Nk5Q3gHhad1Fa0vKiHGS5eCfJov1ZQoeFaYWSM": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "SampleLambdaFunction"
         },
-        "CodeSha256": "ufS2TfeQ1CEn4HsXBvgnkw446elnM5DLa1c/Rl327Fc="
+        "CodeSha256": "8sry5jeL1a6AM7QGNBbD2kCr32NpxN2kd876W1glDAQ="
       }
     },
     "S3BucketBrowsingevents": {
@@ -269,7 +269,7 @@
     "SampleLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "SampleLambdaVersionlXVMNGlVs2RU7bXeEKWrPqHzILcW893X7sQZKPwNM"
+        "Ref": "SampleLambdaVersionfAZ2Nk5Q3gHhad1Fa0vKiHGS5eCfJov1ZQoeFaYWSM"
       },
       "Export": {
         "Name": "sls-revenue-by-search-sample-dev-SampleLambdaFunctionQualifiedArn"
