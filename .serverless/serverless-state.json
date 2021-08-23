@@ -173,7 +173,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/revenue-by-search-sample/dev/1629685613409-2021-08-23T02:26:53.409Z/revenue-by-search-sample.zip"
+                "S3Key": "serverless/revenue-by-search-sample/dev/1629687172428-2021-08-23T02:52:52.428Z/revenue-by-search-sample.zip"
               },
               "Handler": "Hello.lambda_handler",
               "Runtime": "python3.7",
@@ -433,7 +433,7 @@
           "node_modules/**"
         ],
         "artifact": "/Users/spadal/RevenueBySearchEngine/.serverless/revenue-by-search-sample.zip",
-        "artifactDirectoryName": "serverless/revenue-by-search-sample/dev/1629685613409-2021-08-23T02:26:53.409Z"
+        "artifactDirectoryName": "serverless/revenue-by-search-sample/dev/1629687172428-2021-08-23T02:52:52.428Z"
       },
       "functions": {
         "$ref": "$[\"service\"][\"functions\"]"
@@ -448,7 +448,7 @@
   },
   "package": {
     "individually": false,
-    "artifactDirectoryName": "serverless/revenue-by-search-sample/dev/1629685613409-2021-08-23T02:26:53.409Z",
+    "artifactDirectoryName": "serverless/revenue-by-search-sample/dev/1629687172428-2021-08-23T02:52:52.428Z",
     "artifact": "revenue-by-search-sample.zip"
   }
 }
