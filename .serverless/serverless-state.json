@@ -173,7 +173,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/revenue-by-search-sample/dev/1629688373511-2021-08-23T03:12:53.511Z/revenue-by-search-sample.zip"
+                "S3Key": "serverless/revenue-by-search-sample/dev/1629688840202-2021-08-23T03:20:40.202Z/revenue-by-search-sample.zip"
               },
               "Handler": "Hello.lambda_handler",
               "Runtime": "python3.7",
@@ -194,14 +194,14 @@
               "SampleLogGroup"
             ]
           },
-          "SampleLambdaVersioncLINwIpRdlKBZRl3Jg0GP8sR4hfrTs45i6C8iDu1KM": {
+          "SampleLambdaVersionwTcTsbIxRHeFnEZvkqnqThZLqoyCO5KB6y0k8Q7YU": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "SampleLambdaFunction"
               },
-              "CodeSha256": "od1RX7Yctov7AHcHnjx+B3OqmjWWcuYQFYgyM5cgp6w="
+              "CodeSha256": "oQF0BcGQs3yc11PceW/VWYgX79uVFBNF657ZBfel5JY="
             }
           },
           "S3BucketBrowsingevents": {
@@ -281,7 +281,7 @@
           "SampleLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "SampleLambdaVersioncLINwIpRdlKBZRl3Jg0GP8sR4hfrTs45i6C8iDu1KM"
+              "Ref": "SampleLambdaVersionwTcTsbIxRHeFnEZvkqnqThZLqoyCO5KB6y0k8Q7YU"
             },
             "Export": {
               "Name": "sls-revenue-by-search-sample-dev-SampleLambdaFunctionQualifiedArn"
@@ -410,7 +410,7 @@
         "timeout": 6,
         "runtime": "python3.7",
         "vpc": {},
-        "versionLogicalId": "SampleLambdaVersioncLINwIpRdlKBZRl3Jg0GP8sR4hfrTs45i6C8iDu1KM"
+        "versionLogicalId": "SampleLambdaVersionwTcTsbIxRHeFnEZvkqnqThZLqoyCO5KB6y0k8Q7YU"
       }
     },
     "configValidationMode": "warn",
@@ -433,7 +433,7 @@
           "node_modules/**"
         ],
         "artifact": "/Users/spadal/RevenueBySearchEngine/.serverless/revenue-by-search-sample.zip",
-        "artifactDirectoryName": "serverless/revenue-by-search-sample/dev/1629688373511-2021-08-23T03:12:53.511Z"
+        "artifactDirectoryName": "serverless/revenue-by-search-sample/dev/1629688840202-2021-08-23T03:20:40.202Z"
       },
       "functions": {
         "$ref": "$[\"service\"][\"functions\"]"
@@ -448,7 +448,7 @@
   },
   "package": {
     "individually": false,
-    "artifactDirectoryName": "serverless/revenue-by-search-sample/dev/1629688373511-2021-08-23T03:12:53.511Z",
+    "artifactDirectoryName": "serverless/revenue-by-search-sample/dev/1629688840202-2021-08-23T03:20:40.202Z",
     "artifact": "revenue-by-search-sample.zip"
   }
 }
